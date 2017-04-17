@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+    <meta charset="utf-8">
+    <title>WiFi City</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="topbar">
+        <div class="topbar-left">
+          <font size="5">WiFi City</font> </br>
+          <font size="1"> <i>Asset Management Utility</i></font>
+        </div>
+      </div>
+      <h1>Create User</h1>
+      <form action="/users" method="POST">
+          <input type="text" name="username" placeholder="username"/>
+          <input type="password" name="password" />
+          <input type="submit" value="Create User" />
+      </form>
+      <div class="bottombar"></div>
+    </header>
+  </body>
+</html>

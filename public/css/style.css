@@ -1,0 +1,74 @@
+
+.topbar {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh 2vw;
+    background: #486faf;
+    color: lightgrey;
+}
+
+.topbar-left {
+  display: inline-block;
+}
+
+.topbar-right {
+  display: inline-block;
+}
+
+body {
+    background-image: url("wificity3.jpg");
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+* {  box-sizing: border-box; }
+
+img {
+    display: block;
+}
+
+.app {
+    height: 100vh;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    height: 100vh;
+    margin: 0 auto;
+    padding-top: 2vh;
+}
+
+.header {
+    max-height: 600px * 2 / 3;
+    height: 66.6vw;
+    border: 5px solid black;
+    position: relative;
+}
+
+.header-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*display: flex;
+    justify-content: space-between;
+    flex-direction: column;*/
+}
+
+.maincontent {
+  /*height: 20vh;
+  background: salmon;
+  opacity: .2;*/
+}
+
+.bottombar {
+    /*height: 20vh;
+    background: salmon;
+    opacity: .2;*/
+}

@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var User = require('../models/users.js');
 var bcrypt = require('bcrypt');
+
+var User = require('../models/users.js');
 
 router.get('/new', function(req, res){
   res.render('sessions/new.ejs');
@@ -19,8 +20,8 @@ router.post('/', function(req, res){
       } else {
         // res.send('wrong username or password');
         res.render('sessions/tryagain.ejs');
-      };
-    };
+      }
+    }
   });
 });
 
@@ -28,6 +29,6 @@ router.delete('/', function(req, res){
   req.session.destroy(function(){
     res.redirect('/');
   });
-})
+});
 
 module.exports = router;

@@ -4,8 +4,9 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var methodOverride = require('method-override');
-var mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/auth';
+var mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/wificity';
 port = process.env.PORT || 3000;
+
 
 app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({extended:false}));
@@ -21,6 +22,9 @@ app.use('/users', usersController);
 
 var sessionsController = require('./controllers/sessions.js');
 app.use('/sessions', sessionsController);
+
+var wificityController = require('./controllers/wificity.js');
+app.use('/wificity', wificityController);
 
 app.get('/', function(req, res){
     res.render('index.ejs', {

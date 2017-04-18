@@ -9,10 +9,6 @@
     <header class="header">
       <div class="topbar">
         <div class="topbar-left">
-          <!-- <h1>  <% if(currentUser) { %>
-              Welcome <%=currentUser.username%>!
-            <% } else { %> Welcome <% }%>
-          </h1> -->
           <font size="5">WiFi City</font> </br>
           <font size="1"> <i>Asset Management Utility</i></font>
         </div>
@@ -38,7 +34,9 @@
       </div>
       <div class="maincontent">
         <% if(currentUser) { %>
-          <h1> logged in content here </h1>
+          <font size="2"> <a href = "/wificity/transceivers/index"> Index of Transceivers </a></font></br>
+          <font size="2"> <a href = "/wificity/applications/index"> Index of Applications </a></font></br>
+          <font size="2"> <a href = "/wificity/map"> FootPrint Map </a></font>
           <% } else { %>
       <% } %>
       </div>

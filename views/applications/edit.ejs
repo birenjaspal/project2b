@@ -6,20 +6,7 @@
     <title>WiFi City</title>
   </head>
   <body>
-    <header class="header">
-      <div class="topbar">
-        <div class="topbar-left">
-          <font size="5">WiFi City</font> </br>
-          <font size="1"> <i>Asset Management Utility</i></font>
-        </div>
-        <div class="topbar-right">
-            <nav>
-              <form action="/sessions?_method=DELETE" method="POST">
-                <input type="submit" value="Logout"/>
-              </form>
-            </nav>
-        </div>
-      </div>
+<% include ../../templates/header.ejs %>
       <div class="maincontent">
     <h1> Edit Application Page </h1>
     <form action="/wificity/applications/<%=application.id%>?_method=PUT" method="Post">
@@ -30,6 +17,5 @@
     </form>
   </div>
   <div class="bottombar"></div>
-</header>
 </body>
 </html>

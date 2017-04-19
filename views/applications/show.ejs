@@ -6,20 +6,7 @@
     <title>WiFi City</title>
   </head>
   <body>
-    <header class="header">
-      <div class="topbar">
-        <div class="topbar-left">
-          <font size="5">WiFi City</font> </br>
-          <font size="1"> <i>Asset Management Utility</i></font>
-        </div>
-        <div class="topbar-right">
-            <nav>
-              <form action="/sessions?_method=DELETE" method="POST">
-                <input type="submit" value="Logout"/>
-              </form>
-            </nav>
-        </div>
-      </div>
+    <% include ../../templates/header.ejs %>
       <div class="maincontent">
         <h1>Application Details</h1>
 
@@ -34,9 +21,7 @@
           <li> color: <%=application.color%></li>
           <li> transceiver(s): <%=application.transceivers%></li>
         </ul><br/><br/>
-          <a href="/wificity/">Back to Application Index</a>
       </div>
       <div class="bottombar"></div>
-    </header>
   </body>
 </html>

@@ -6,20 +6,8 @@
     <title>WiFi City</title>
   </head>
   <body>
-    <header class="header">
-      <div class="topbar">
-        <div class="topbar-left">
-          <font size="5">WiFi City</font> </br>
-          <font size="1"> <i>Asset Management Utility</i></font>
-        </div>
-        <div class="topbar-right">
-            <nav>
-              <form action="/sessions?_method=DELETE" method="POST">
-                <input type="submit" value="Logout"/>
-              </form>
-            </nav>
-        </div>
-      </div>
+    <% include ../../templates/header.ejs %>
+
       <div class="maincontent">
         <h1>Applications</h1>
 
@@ -28,13 +16,12 @@
         <ul>
             <% for(var i = 0; i < applications.length; i++){ %>
                 <li>
-              <a href="/wificity/applications/<%=applications[i]._id%>">><%=applications[i].owner; %></a><br/>
+              <a href="/wificity/applications/<%=applications[i]._id%>"><%=applications[i].owner; %></a><br/>
                 </li>
             <% } %>
         </ul>
 
       </div>
       <div class="bottombar"></div>
-    </header>
   </body>
 </html>

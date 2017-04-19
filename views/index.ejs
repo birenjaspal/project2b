@@ -8,14 +8,16 @@
   <body>
     <% include ../templates/header.ejs %>
 
-      <div class="maincontent">
+
         <% if(currentUser) { %>
+          <div class="maincontent">
           <font size="2"> <a href = "/wificity/transceivers/index"> Index of Transceivers </a></font></br>
           <font size="2"> <a href = "/wificity/applications/index"> Index of Applications </a></font></br>
           <font size="2"> <a href = "/wificity/map"> FootPrint Map </a></font>
+              </div>
           <% } else { %>
       <% } %>
-      </div>
+
       <div class="bottombar"></div>
   </body>
 </html>

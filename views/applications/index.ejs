@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <title>WiFi City</title>
   </head>
-  <body>
     <% include ../../templates/header.ejs %>
+  <body>
 
-      <div class="maincontent">
-        <h1>Applications</h1>
+    <div id="maincontent">
+      <h1 id="subtitle">Applications</h1>
 
-        <a href="/wificity/applications/newapplication">Add Application</a><br/>
+        <a id="submenu" href="/wificity/applications/newapplication">ADD APPLICATION</a><br/>
 
         <ul>
             <% for(var i = 0; i < applications.length; i++){ %>

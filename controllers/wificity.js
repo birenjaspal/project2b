@@ -223,12 +223,17 @@ router.post('/', function(req, res){
 //get route for displaying map
 router.get('/map', function(req, res){
   if(req.session.currentuser){
-    res.render('map/footprintmap.ejs', {
-      currentUser: req.session.currentuser
+    Transceivers.find({}, function(error, allTransceivers){
+      res.render('map/footprintmap.ejs', {
+        transceivers: allTransceivers,
+        currentUser: req.session.currentuser
+      });
     });
   } else {
     res.render('sessions/tryagain.ejs');
   }
 });
+
+
 
 module.exports = router;

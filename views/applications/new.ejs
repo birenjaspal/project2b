@@ -5,15 +5,16 @@
     <meta charset="utf-8">
     <title>WiFi City</title>
   </head>
-  <body>
     <% include ../../templates/header.ejs %>
-      <div class="maincontent">
-    <h1> Add an Application </h1><br><br>
-    <form action="/wificity/applications" method="POST">
+
+  <body>
+    <div id="maincontent">
+      <h1 id="subtitle">Add an Application </h1><br/>
+    <form id="subtitle" action="/wificity/applications" method="POST">
            owner: <input type="text" name="owner" /><br/>
            color: <input type="text" name="color" /><br/>
-           transceiver(s): <input type="text" name="transceivers" /><br/>
-           <input type="submit" name="" value="Create Application"/>
+           transceiver(s): <input type="text" name="transceivers" /><br/><br/>
+           <input id="submenu" type="submit" name="" value="Create Application"/>
     </form>
 </div>
 <div class="bottombar"></div>

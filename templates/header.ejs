@@ -1,4 +1,4 @@
-<header class="header">
+<header>
   <div class="topbar">
     <div class="topbar-left">
       <a id="" href="/" target="_parent" style="color: white; text-decoration: none;"><font size="5">WiFi City</font> </a></br>
@@ -12,6 +12,8 @@
             <input type="submit" value="Logout"/>
           </form>
         </nav>
+        <header background-image="wificity3.jpg"
+      <body background=none>
 
       <% } else { %>
         <!-- <a href="/sessions/new">Log In</a> -->
@@ -24,4 +26,14 @@
       <% } %>
     </div>
   </div>
+  <% if(currentUser) { %>
+    <nav>
+      <ul class="nav nav-tabs">
+        <li><a href="/wificity/transceivers/index">Transceivers</a></li>
+        <li><a href="/wificity/applications/index">Applications</a></li>
+        <li><a href="/wificity/map">Footprint map</a></li>
+      </ul>
+    </nav>
+    <% } else { %>
+      <% } %>
 </header>

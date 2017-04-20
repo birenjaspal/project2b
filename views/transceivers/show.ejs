@@ -8,22 +8,22 @@
   <body>
   <% include ../../templates/header.ejs %>
 
-      <div class="maincontent">
-        <h1>Transceiver Details</h1>
+  <div id="maincontent">
+    <h1 id="subtitle">Transceiver Details</h1>
 
-        <a href="/wificity/transceivers/<%=transceiver._id%>/edit">Edit</a>
-
-        <form action="/wificity/transceivers/deletetransceiver/<%=transceiver._id%>?_method=DELETE" method="POST">
-          <input type="submit" value="DELETE"/>
-        </form>
+        <a id="submenu" href="/wificity/transceivers/<%=transceiver._id%>/edit">EDIT</a>
 
         <ul>
           <li> type: <%=transceiver.type%></li>
           <li> model: <%=transceiver.model%></li>
           <li> wirelessRange: <%=transceiver.wirelessRange%></li>
           <li> power: <%=transceiver.power%></li>
-          <li> location: <%=transceiver.location%></li>
-        </ul><br/><br/>
+          <li> latitude: <%=transceiver.latitude%></li>
+          <li> longitude: <%=transceiver.longitude%></li>
+        </ul>
+        <form action="/wificity/transceivers/deletetransceiver/<%=transceiver._id%>?_method=DELETE" method="POST">
+          <input id="submenu" type="submit" value="DELETE"/>
+        </form>
       </div>
       <div class="bottombar"></div>
   </body>

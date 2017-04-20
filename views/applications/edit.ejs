@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <title>WiFi City</title>
   </head>
+  <% include ../../templates/header.ejs %>
   <body>
-<% include ../../templates/header.ejs %>
-      <div class="maincontent">
-    <h1> Edit Application Page </h1>
+    <div id="maincontent">
+      <h1 id="subtitle"> Edit Application Page </h1>
     <form action="/wificity/applications/<%=application.id%>?_method=PUT" method="Post">
       owner: <input type="text" name="owner" value="<%=application.owner%>"/><br/>
       color: <input type="text" name="color" value="<%=application.color%>"/><br/>

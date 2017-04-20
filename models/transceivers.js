@@ -5,7 +5,8 @@ var transceiverSchema = mongoose.Schema({
     model: String,
     wirelessRange: String,
     power: String,
-    location: String
+    latitude: String,
+    longitude: String
 });
 
 var Transceiver = mongoose.model('Transceiver', transceiverSchema);

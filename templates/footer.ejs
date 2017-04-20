@@ -1,27 +1,3 @@
-<header class="header">
-  <div class="topbar">
-    <div class="topbar-left">
-      <a id="" href="/" target="_parent" style="color: white; text-decoration: none;"><font size="5">WiFi City</font> </a></br>
-      <font size="1"> <i>Asset Management Utility</i></font>
-    </div>
-    <div class="topbar-right">
-      <% if(currentUser) { %>
-        Welcome <%=currentUser.username%>!
-        <nav>
-          <form action="/sessions?_method=DELETE" method="POST">
-            <input type="submit" value="Logout"/>
-          </form>
-        </nav>
+<footer>
 
-      <% } else { %>
-        <!-- <a href="/sessions/new">Log In</a> -->
-        <form action="/sessions" method="POST">
-            <input type="text" name="username" placeholder="username"/>
-            <input type="password" name="password" placeholder="password"/>
-            <input type="submit" value="Log In" />
-        </form>
-        <font size="2"> <i>Not a User Yet?  </i>Register <a href="/users/new">here</a></font>
-      <% } %>
-    </div>
-  </div>
-</header>
+</footer>

@@ -5,22 +5,24 @@
     <meta charset="utf-8">
     <title>WiFi City</title>
   </head>
-  <body>
+
     <% include ../../templates/header.ejs %>
-      <div class="maincontent">
-        <h1>Application Details</h1>
+  <body>
+    <div id="maincontent">
+      <h1 id="subtitle">Application Details</h1>
 
-        <a href="/wificity/applications/<%=application._id%>/edit">Edit</a>
+        <a id="submenu" href="/wificity/applications/<%=application._id%>/edit">EDIT</a>
 
-        <form action="/wificity/applications/deleteapplication/<%=application._id%>?_method=DELETE" method="POST">
-          <input type="submit" value="DELETE"/>
-        </form>
+
 
         <ul>
           <li> owner: <%=application.owner%></li>
           <li> color: <%=application.color%></li>
           <li> transceiver(s): <%=application.transceivers%></li>
-        </ul><br/><br/>
+        </ul>
+        <form action="/wificity/applications/deleteapplication/<%=application._id%>?_method=DELETE" method="POST">
+          <input id="submenu" type="submit" value="DELETE"/>
+        </form>
       </div>
       <div class="bottombar"></div>
   </body>

@@ -9,15 +9,16 @@
 
          <% include ../../templates/header.ejs %>
 
-      <div class="maincontent">
-    <h1> Edit Transceiver  </h1>
-    <form action="/wificity/transceivers/<%=transceiver.id%>?_method=PUT" method="Post">
+         <div id="maincontent">
+           <h1 id="subtitle"> Edit Transceiver  </h1>
+    <form id="subtitle" action="/wificity/transceivers/<%=transceiver.id%>?_method=PUT" method="Post">
       type: <input type="text" name="type" value="<%=transceiver.type%>"/><br/>
       model: <input type="text" name="model" value="<%=transceiver.model%>"/><br/>
       wirelessRange: <input type="text" name="wirelessRange" value="<%=transceiver.wirelessRange%>"/><br/>
       power: <input type="text" name="power" value="<%=transceiver.power%>"/><br/>
-      location: <input type="text" name="location" value="<%=transceiver.location%>"/><br/>
-      <input type="submit" name="" value="Submit Changes" />
+      latitude: <input type="text" name="latitude" value="<%=transceiver.latitude%>"/><br/>
+      longitude: <input type="text" name="longitude" value="<%=transceiver.longitude%>"/><br/>
+      <input id="submenu" type="submit" name="" value="Submit Changes" />
     </form>
   </div>
   <div class="bottombar"></div>

@@ -1,11 +1,41 @@
 
+body {
+    background-color: rgb(72,111,175);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: -20% -20%;
+}
+
+a{
+  color: lightgrey;
+}
+
 .topbar {
-    display: -webkit-flex;
-    display: flex;
-    justify-content: space-between;
-    padding: 1vh 2vw;
-    background: #486faf;
-    color: lightgrey;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  background: #486faf;
+  color: lightgrey;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 80px;
+}
+
+#nav {
+  color: lightgrey;
+}
+
+#subtitle {
+  color: lightgrey;
+  position: relative;
+  left: 40px;
+}
+
+#submenu {
+  color: black;
+  position: relative;
+  left: 40px;
 }
 
 .topbar-left {
@@ -16,16 +46,12 @@
   display: inline-block;
 }
 
-body {
-    background-image: url("wificity3.jpg");
-    background-repeat:no-repeat;
-    background-size:contain;
-    background-position:center;
-}
+
 
 ul {
   list-style-type: none;
 }
+
 
 * {  box-sizing: border-box; }
 
@@ -33,7 +59,11 @@ img {
     display: block;
 }
 
-.app {
+li {
+  color: lightgrey;
+}
+
+/*.app {
     height: 100vh;
     width: 100%;
     max-width: 600px;
@@ -41,16 +71,16 @@ img {
     height: 100vh;
     margin: 0 auto;
     padding-top: 2vh;
-}
+}*/
 
-.header {
+/*.header {
     max-height: 600px * 2 / 3;
     height: 66.6vw;
     border: 5px solid black;
     position: relative;
-}
+}*/
 
-.header-content {
+/*.header-content {
     position: absolute;
     top: 0;
     left: 0;
@@ -59,23 +89,42 @@ img {
     /*display: flex;
     justify-content: space-between;
     flex-direction: column;*/
-}
+}*/
 
-.maincontent {
+#maincontent {
   position: absolute;
   left: 7%;
   top: 20%;
   width: 30%;
   height: 50%;
   overflow: scroll;
-  background: grey;
+  background: #486faf;
+  color: blue;
   opacity: .8;
   padding: 5px 5px 5px 20px;
   border-radius: 25px;
 }
 
-.bottombar {
-    /*height: 20vh;
-    background: salmon;
-    opacity: .2;*/
+.nav-tabs{
+  background-color:#161616;
 }
+.tab-content{
+    background-color:#303136;
+    color:#fff;
+    padding:5px
+}
+.nav-tabs > li > a{
+  border: medium none;
+}
+.nav-tabs > li > a:hover{
+  background-color: #200000 !important;
+    border: medium none;
+    border-radius: 0;
+    color:#fff;
+}
+
+/*.bottombar {
+    height: 20vh;
+    background: salmon;
+    opacity: .2;
+}*/

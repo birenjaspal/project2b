@@ -9,15 +9,17 @@
 
      <% include ../../templates/header.ejs %>
 
-      <div class="maincontent">
-    <h1> Add a Transceiver </h1><br><br>
-    <form action="/wificity/transceivers" method="POST">
+     <div id="maincontent">
+       <h1 id="subtitle"> Add a Transceiver </h1><br/>
+    <form id="subtitle" action="/wificity/transceivers" method="POST">
            type: <input type="text" name="type" /><br/>
            model: <input type="text" name="model" /><br/>
            wirelessRange: <input type="text" name="wirelessRange" /><br/>
            power: <input type="text" name="power" /><br/>
-           location: <input type="text" name="location" /><br/>
-           <input type="submit" name="" value="Create Transceiver"/>
+           latitude: <input type="text" name="latitude" /><br/>
+           longitude: <input type="text" name="longitude" /><br/><br>
+
+           <input id="submenu" type="submit" name="" value="Create Transceiver"/>
     </form>
 </div>
 <div class="bottombar"></div>

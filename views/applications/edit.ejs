@@ -9,13 +9,15 @@
   <body>
     <div id="maincontent">
       <h1 id="subtitle"> Edit Application Page </h1>
-    <form action="/wificity/applications/<%=application.id%>?_method=PUT" method="Post">
+    <form id="subtitle" action="/wificity/applications/<%=application.id%>?_method=PUT" method="Post">
       owner: <input type="text" name="owner" value="<%=application.owner%>"/><br/>
       color: <input type="text" name="color" value="<%=application.color%>"/><br/>
       transceiver(s): <input type="text" name="transceivers" value="<%=application.transceivers%>"/><br/>
-      <input type="submit" name="" value="Submit Changes" />
+      <input id="submenu" type="submit" name="" value="Submit Changes" />
     </form>
+
+<IMG class="thumbnails" SRC="/images/satellite.png" ALIGN=”right” />
   </div>
-  <div class="bottombar"></div>
+  <div class="bottombar">GA WDIR - Project 2</div>
 </body>
 </html>

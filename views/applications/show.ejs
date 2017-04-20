@@ -18,12 +18,14 @@
         <ul>
           <li> owner: <%=application.owner%></li>
           <li> color: <%=application.color%></li>
-          <li> transceiver(s): <%=application.transceivers%></li>
+          <li> transceiver(s): <%=application.transceivers.length%></li>
         </ul>
         <form action="/wificity/applications/deleteapplication/<%=application._id%>?_method=DELETE" method="POST">
           <input id="submenu" type="submit" value="DELETE"/>
         </form>
+
+  <IMG class="thumbnails" SRC="/images/satellite.png" ALIGN=”right” />
       </div>
-      <div class="bottombar"></div>
+      <div class="bottombar">GA WDIR - Project 2</div>
   </body>
 </html>

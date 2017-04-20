@@ -18,7 +18,7 @@ a{
   color: lightgrey;
   padding-top: 30px;
   padding-right: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 9px;
   padding-left: 80px;
 }
 
@@ -46,7 +46,16 @@ a{
   display: inline-block;
 }
 
-
+.bottombar {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0rem;
+  background-color: rgb(22,22,22);
+  text-align: center;
+  color: lightgrey;
+}
 
 ul {
   list-style-type: none;
@@ -55,8 +64,13 @@ ul {
 
 * {  box-sizing: border-box; }
 
-img {
+.thumbnails {
     display: block;
+    border-radius: 8px;
+    position: absolute;
+    left: 400px;
+    top: 150px;
+    height: 300px;
 }
 
 li {
@@ -122,6 +136,33 @@ li {
     border-radius: 0;
     color:#fff;
 }
+
+.blink_text {
+    display: inline;
+    animation:1s blinker linear infinite;
+    -webkit-animation:1s blinker linear infinite;
+    -moz-animation:1s blinker linear infinite;
+
+     color: red;
+    }
+
+    @-moz-keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @-webkit-keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
 
 /*.bottombar {
     height: 20vh;

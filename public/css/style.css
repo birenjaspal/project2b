@@ -10,6 +10,17 @@ a{
   color: lightgrey;
 }
 
+.form-item {
+  padding: 10px 0 10px 200px;
+  position: relative;
+  color: lightgrey;
+}
+.form-item label {
+    color: lightgrey;
+  left: 0;
+  position: absolute;
+}
+
 .topbar {
   display: -webkit-flex;
   display: flex;

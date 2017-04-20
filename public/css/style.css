@@ -117,7 +117,7 @@ li {
   border: medium none;
 }
 .nav-tabs > li > a:hover{
-  background-color: #200000 !important;
+  background-color: #999999 !important;
     border: medium none;
     border-radius: 0;
     color:#fff;

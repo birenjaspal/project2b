@@ -29,10 +29,9 @@
     };
 
     <% for(var i = 0; i < transceivers.length; i++){ %>
-      citymap[("city"+(<%=i.toString()%>))] = { center: {lat:  + <%=transceivers[i].latitude%>, lng: <%=transceivers[i].longitude%> }, population: <%=transceivers[i].power%> };
+      citymap[("city"+(<%=i.toString()%>))] = { center: {lat:  + <%=transceivers[i].latitude%>, lng: <%=transceivers[i].longitude%> }, population: <%=transceivers[i].power%>, URL:  "transceivers/<%=transceivers[i]._id%>"};
 
       <% } %>
-
 
       function initMap() {
         // Create the map.
@@ -44,9 +43,9 @@
 
         // Construct the circle for each value in citymap.
 
-        for (var city in citymap) {
+        for (let city in citymap) {
           // Add the circle for this city to the map.
-          var cityCircle = new google.maps.Circle({
+          let cityCircle = new google.maps.Circle({
             strokeColor: '#FF0000',
             strokeOpacity: 0.8,
             strokeWeight: 2,
@@ -54,7 +53,15 @@
             fillOpacity: 0.35,
             map: map,
             center: citymap[city].center,
-            radius: Math.sqrt(citymap[city].population) * 100
+            radius: Math.sqrt(citymap[city].population) * 100,
+            URL: citymap[city].URL
+
+          });
+
+          google.maps.event.addListener(cityCircle, 'click', function() {
+
+            // console.log("here:", cityCircle.URL);
+            window.location = cityCircle.URL;
           });
         }
       }

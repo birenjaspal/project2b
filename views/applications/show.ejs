@@ -14,12 +14,13 @@
         <a id="submenu" href="/wificity/applications/<%=application._id%>/edit">EDIT</a>
 
 
-
+        <div id="appview">
         <ul>
           <li> owner: <%=application.owner%></li>
           <li> color: <%=application.color%></li>
-          <li> transceiver(s): <%=application.transceivers.length%></li>
+          <li> transceiver(s): <%=application.transceivers%></li>
         </ul>
+      </div>
         <form action="/wificity/applications/deleteapplication/<%=application._id%>?_method=DELETE" method="POST">
           <input id="submenu" type="submit" value="DELETE"/>
         </form>

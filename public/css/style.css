@@ -21,6 +21,11 @@ a{
   position: absolute;
 }
 
+#appview {
+  width:400px;
+  word-break:break-all;
+}
+
 .topbar {
   display: -webkit-flex;
   display: flex;
